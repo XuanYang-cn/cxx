@@ -19,7 +19,7 @@ class dataset:
             self.path = args.get("path")
         self.fake_datas = []
 
-    def fake(self, dimension, number):
+    def fake(self, dimension:int, number:int):
         """
         :@dimension: dimension of the generated vectors of float.
         :@number:    numbers of vectors to be generated.
@@ -28,4 +28,4 @@ class dataset:
         if len(self.fake_datas) != 0:
             self.fake_datas.clear()
         for num in range(number):
-            self.fake_datas.append([random.random() for i in range(dimension)])
+            self.fake_datas.append({random.random() for i in range(dimension)})
