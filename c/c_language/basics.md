@@ -125,3 +125,18 @@ int main() {
 [printf](06_printf.c)
 
 ### 1.6 Array declaration, definition, initialization
+### 1.7 Macros
+### 1.8 String array
+
+Header *string.h*
+
+|func     |description   |
+|:-------:|:------------:|
+|strlen() |length        |
+|strcmp() |compare       |
+|strcpy() |copy          |
+|strncmp()|safe compare  |
+|strncpy()|safe copy     |
+|memcpy() |memory copy   |
+|memcmp() |memory compare|
+|memset() |memory set    |
