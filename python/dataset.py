@@ -23,9 +23,20 @@ class dataset:
         """
         :@dimension: dimension of the generated vectors of float.
         :@number:    numbers of vectors to be generated.
-        :@return:    generated two-dim array[number][dimension]
+        :@return:    generated two-dim array[number][dimension] in float
         """
         if len(self.fake_datas) != 0:
             self.fake_datas.clear()
         for num in range(number):
             self.fake_datas.append({random.random() for i in range(dimension)})
+
+    def fake_int(self, dimension:int, number:int, begin=0, end=10):
+        """
+        :@dimension: dimension of the generated vectors of float.
+        :@number:    numbers of vectors to be generated.
+        :@return:    generated two-dim array[number][dimension] in int
+        """
+        if len(self.fake_datas) != 0:
+            self.fake_datas.clear()
+        for num in range(number):
+            self.fake_datas.append({random.randint(begin, end) for i in range(dimension)})
