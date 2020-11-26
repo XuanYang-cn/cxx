@@ -1,3 +1,4 @@
 cmake_build
 *.idea
 __pycache__
+*.swp
