@@ -1,4 +1,5 @@
 cmake_build
 *.idea
 **/__pycache__/**
+*.out
 *.sw[op]
