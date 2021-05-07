@@ -7,6 +7,8 @@ def test_dataset():
     data.fake(dimension=2, number=10)
     print(data.fake_datas[:5][:5])
 
+    data.fake_int(dimension=2, number=2)
+
 
 def test_kmeans():
     data = dataset()
@@ -15,7 +17,7 @@ def test_kmeans():
     # test cal_distance
     kmeans = km(None, 2, 2, 0)
     dist = kmeans.cal_distance([0.1, 0.1], [0.0, 0.0])
-    print(dist)
+    #  print(dist)
     assert dist - 0.02 < 0.00001
     del kmeans
 
@@ -24,7 +26,7 @@ def test_kmeans():
     data.fake(dimension=2, number=10)
     kmeans = km(data.fake_datas, 2, 2, 10)
     kmeans.init_centroids()
-    print(kmeans.centroids)
+    #  print(kmeans.centroids)
     assert len(kmeans.centroids) == 2
 
     # test cal_distance
@@ -32,7 +34,7 @@ def test_kmeans():
     data = dataset()
     data.fake(10, 2)
     dist = kmeans.cal_distance(data.fake_datas[0], data.fake_datas[1])
-    print(dist)
+    #  print(dist)
     assert dist > 0
 
     # test clustering
@@ -40,8 +42,8 @@ def test_kmeans():
     data.fake_int(dimension=2, number=100)
     kmeans = km(data.fake_datas, 2, 2, 10)
     kmeans.init_centroids()
+    print("init centroids: ", kmeans.centroids)
     kmeans.clustering()
-
 
 
 if __name__ == "__main__":

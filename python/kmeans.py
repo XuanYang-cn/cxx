@@ -43,15 +43,15 @@ class kmeans:
         except Exception:
             self.clusters = [[] for i in range(self.k)]
             for i in range(self.size):
-                closest = self.centroids[0]
-                closest_index = 0
                 min_dis = self.cal_distance(self.data[i], self.centroids[0])
-                for i, c in enumerate(self.centroids):
+                index_of_centroid = 0
+                for index, c in enumerate(self.centroids):
                     dis = self.cal_distance(self.data[i], c)
                     if dis < min_dis:
-                        closest_index, min_dis = i, dis
-                self.clusters[closest_index].append(self.data[i])
-        print(self.clusters)
+                        index_of_centroid, min_dis = index, dis
+                self.clusters[index_of_centroid].append(self.data[i])
+
+        self.clusters
 
     def kmeans():
         """Kmeans procedure"""
