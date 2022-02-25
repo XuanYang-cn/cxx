@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "build file $1"
-
-g++ $1 -o $1.out
