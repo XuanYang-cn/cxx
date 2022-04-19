@@ -23,7 +23,7 @@ class Database{
 
  private:
     std::vector<Employee> employees;
-    int employeeNumber = First_Employee_Number;
-}
+    int nextEmployeeNumber = First_Employee_Number;
+};
 
 }// namespace Records

@@ -3,4 +3,4 @@ cmake_build
 **/__pycache__/**
 *.out
 *.sw[op]
-build
+bin

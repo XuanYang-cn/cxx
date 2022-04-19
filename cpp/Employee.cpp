@@ -1,5 +1,5 @@
 #include "Employee.h"
-#include <exception>
+#include <stdexcept>
 #include <string>
 #include "Employee.h"
 
@@ -10,14 +10,14 @@ Employee::Employee(const std::string& firstName, const std::string& lastName)
 
 void
 Employee::promote(int raiseAmount){
-    setSalary(getSalary() + raiseAmount)
+    setSalary(getSalary() + raiseAmount);
 }
 
 void
 Employee::demote(int demeritAmount){
     auto curr = getSalary();
     if (curr < demeritAmount){
-        throw std::exception("invalid demeritAmount");
+        throw std::logic_error("invalid demeritAmount");
     }
 
     setSalary(curr - demeritAmount);
@@ -35,22 +35,22 @@ Employee::fire(){
 
 void
 Employee::display() const {
-    cout << "Employee: " << getLastName() << ", " << getFirstName() << endl;
-    cout << "-------------------------" << endl;
-    cout << (isHired() ? "Current Employee" : "Former Employee") << endl;
-    cout << "Employee Number: " << getEmployeeNumber() << endl;
-    cout << "Salary: $" << getSalary() << endl;
-    cout << endl;
+    std::cout << "Employee: " << getLastName() << ", " << getFirstName() << std::endl;
+    std::cout << "-------------------------" << std::endl;
+    std::cout << (isHired() ? "Current Employee" : "Former Employee") << std::endl;
+    std::cout << "Employee Number: " << getEmployeeNumber() << std::endl;
+    std::cout << "Salary: $" << getSalary() << std::endl;
+    std::cout << std::endl;
 }
 
 void
-Employee::setFirstName(const std::string& firstName){
-    firstName = firstName;
+Employee::setFirstName(const std::string& name){
+    firstName = name;
 }
 
 void
-Employee::setLastName(const std::string& lastName){
-    lastName = lastName;
+Employee::setLastName(const std::string& name){
+    lastName = name;
 }
 
 void

@@ -1,12 +1,13 @@
 #pragma once
+#include <iostream>
 #include <string>
 
 namespace Records {
 
-const Default_Starting_Salary = 3000;
+const int Default_Starting_Salary = 3000;
 
 class Employee{
- pubic:
+ public:
     Employee() = default;
     Employee(const std::string& firstName, const std::string& lastName);
 

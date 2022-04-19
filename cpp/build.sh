@@ -18,4 +18,4 @@ ${CPP_SRC_DIR}
 echo ${CMAKE_CMD}
 ${CMAKE_CMD}
 
-make -j4
+make -j4 && make install
