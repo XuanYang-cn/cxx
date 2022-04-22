@@ -59,8 +59,8 @@ Employee::setEmployeeNumber(int number){
 }
 
 void
-Employee::setSalary(int salary){
-    salary = salary;
+Employee::setSalary(int s){
+    salary = s;
 }
 
 const std::string&
