@@ -4,3 +4,4 @@ cmake_build
 *.out
 *.sw[op]
 bin
+build
